@@ -1,0 +1,108 @@
+{
+  "user": {
+    "id": 1,
+    "employeeCode": "558",
+    "firstName": "Divyateja",
+    "lastName": "Konatam",
+    "fullName": "Divyateja Konatam",
+    "designation": "Software Development Engineer",
+    "officeLocation": "Gurgaon",
+    "tenantCode": "beehyv",
+    "profileImageUrl": "https://example.com/photos/employee-profiles/divyateja.konatam.png",
+    "timezone": "Asia/Kolkata"
+  },
+  "todaySummary": {
+    "workingDate": "2026-02-20T00:00:00Z",
+    "clockedSeconds": 28800,
+    "breakSeconds": 3600,
+    "firstInTime": "2026-02-20T09:00:00Z",
+    "lastOutTime": "2026-02-20T18:00:00Z"
+  },
+  "workPayroll": {
+    "expectedSeconds": 28800,
+    "officeSeconds": 25200,
+    "wfhSeconds": 3600,
+    "externalReportedSeconds": 0,
+    "externalApprovedSeconds": 0,
+    "payrollSeconds": 28800,
+    "utilizationPercentage": 100.0
+  },
+  "leaveQuotas": [
+    {
+      "id": 381,
+      "leaveType": "casual",
+      "displayName": "Casual Leave",
+      "periodUnit": "yearly",
+      "daysEntitled": 18,
+      "daysAvailed": 16,
+      "daysBalance": 2
+    },
+    {
+      "id": 382,
+      "leaveType": "sick",
+      "displayName": "Sick Leave",
+      "periodUnit": "yearly",
+      "daysEntitled": 10,
+      "daysAvailed": 0,
+      "daysBalance": 10
+    },
+    {
+      "id": 383,
+      "leaveType": "earned",
+      "displayName": "Earned Leave",
+      "periodUnit": "yearly",
+      "daysEntitled": 250,
+      "daysAvailed": 0,
+      "daysBalance": 250
+    },
+    {
+      "id": 384,
+      "leaveType": "optional",
+      "displayName": "Optional Holiday",
+      "periodUnit": "yearly",
+      "daysEntitled": 5,
+      "daysAvailed": 0,
+      "daysBalance": 5
+    }
+  ],
+  "wfhQuota": {
+    "periodUnit": "monthly",
+    "daysEntitled": 8,
+    "daysAvailed": 2,
+    "daysBalance": 6
+  },
+  "quickLinks": [
+    {
+      "id": "apply_leave",
+      "title": "Apply Leave",
+      "iconSystemName": "calendar.badge.exclamationmark",
+      "targetUrl": "https://beesheets.beehyv.com/leaves/apply",
+      "isExternal": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "view_schedule",
+      "title": "View Schedule",
+      "iconSystemName": "calendar",
+      "targetUrl": "https://beesheets.beehyv.com/schedule",
+      "isExternal": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "request_wfh",
+      "title": "Request WFH",
+      "iconSystemName": "house",
+      "targetUrl": "https://beesheets.beehyv.com/wfh/request",
+      "isExternal": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "view_payslip",
+      "title": "View Payslip",
+      "iconSystemName": "doc.text",
+      "targetUrl": "https://beesheets.beehyv.com/payroll/payslip",
+      "isExternal": true,
+      "sortOrder": 4
+    }
+  ]
+}

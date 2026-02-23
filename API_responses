@@ -1,0 +1,457 @@
+We have added the Models and Services here. as the next step I'll be providing you the json response from the APIs.
+To create our dashboard page.
+For user greetings:
+curl -X 'GET' \
+  'http://192.168.5.40:8081/v1/users/e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d' \
+  -H 'accept: */*' \
+  -H 'Authorization
+
+  Download
+{
+  "createdBy": "divyateja.konatam@beehyv.com",
+  "updatedBy": "divyateja.konatam@beehyv.com",
+  "createdAt": "2024-05-23T11:25:32.318",
+  "updatedAt": "2025-04-24T12:39:35.606",
+  "id": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+  "employeeCode": 558,
+  "tenantId": "beehyv",
+  "firstName": "divyateja",
+  "lastName": "konatam",
+  "emailId": "divyateja.konatam@beehyv.com",
+  "designation": "sde",
+  "dateOfBirth": null,
+  "dateOfJoining": "2025-01-01T18:30:00.000+00:00",
+  "dateOfInternship": null,
+  "photoPath": "photos/employee-profiles/divyateja.konatam.png",
+  "phoneNumber": null,
+  "emergencyContactNumber": null,
+  "emergencyContactName": null,
+  "bloodGroup": null,
+  "jobType": "FULL_TIME",
+  "gender": "",
+  "status": "ACTIVE",
+  "locationId": 3,
+  "locationName": "Gurgaon",
+  "employeePrivileges": {
+    "SELF_APPROVE_LEAVE_WFH": "YES"
+  }
+}
+
+For the leaves summary:
+https://beesheets-qa.beehyv.com/workflow/leaves/e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d/leavesSummary?year=2026
+{
+    "status": "200 OK",
+    "message": null,
+    "data": {
+        "createdBy": null,
+        "updatedBy": null,
+        "createdAt": null,
+        "updatedAt": null,
+        "id": null,
+        "tenantId": "beehyv",
+        "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+        "year": null,
+        "leavesRecordDTOList": [
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 381,
+                "leaveId": 7,
+                "usedLeaves": 16,
+                "totalAllowedLeaves": 18
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 382,
+                "leaveId": 10,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 0
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 383,
+                "leaveId": 8,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 250
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 384,
+                "leaveId": 6,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 0
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 385,
+                "leaveId": 12,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 0
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 386,
+                "leaveId": 13,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 0
+            },
+            {
+                "createdBy": null,
+                "updatedBy": null,
+                "createdAt": null,
+                "updatedAt": null,
+                "id": 387,
+                "leaveId": 1,
+                "usedLeaves": 0,
+                "totalAllowedLeaves": 18
+            }
+        ]
+    },
+    "errors": null
+}
+
+for the timings:
+https://beesheets-qa.beehyv.com/timings/consolidated/e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d/summary?startDate=2026-02-01&endDate=2026-02-19
+
+{
+    "startDate": "2026-02-01",
+    "endDate": "2026-02-19",
+    "deficitHrs": 272970000,
+    "expectedHours": 421200000,
+    "totalWfhHours": 0,
+    "totalExternalHours": 0,
+    "totalOfficeHours": 172126000,
+    "weekendHours": 0,
+    "workFromHomeDays": 0,
+    "workFromHomeDaysWithPending": 0,
+    "totalHours": 172126000,
+    "leaves": 1
+}
+
+https://beesheets-qa.beehyv.com/projects/leave-type?year=2026
+[
+    {
+        "createdBy": "divyateja.konatam@beehyv.com",
+        "updatedBy": "vanshika12",
+        "createdAt": "2024-11-07T10:28:06.099",
+        "updatedAt": "2025-02-10T07:55:40.314",
+        "id": 7,
+        "leaveCategoryId": 1,
+        "leaveName": "Casual Leave (PTO)",
+        "numberOfDays": 18,
+        "year": "2025",
+        "tenantId": "beehyv",
+        "color": "#F4511E",
+        "maxCarryForwardLeavesAllowed": 5,
+        "maxEncashmentLeavesAllowed": 5
+    },
+    {
+        "createdBy": "divyateja.konatam@beehyv.com",
+        "updatedBy": "kapil.garg",
+        "createdAt": "2024-11-14T10:13:35.887",
+        "updatedAt": "2026-01-03T08:56:53.723",
+        "id": 10,
+        "leaveCategoryId": 1,
+        "leaveName": "Comp Off",
+        "numberOfDays": 3,
+        "year": "2025",
+        "tenantId": "beehyv",
+        "color": "#F6BF26",
+        "maxCarryForwardLeavesAllowed": 2,
+        "maxEncashmentLeavesAllowed": 1
+    },
+    {
+        "createdBy": "swetha.pullela@beehyv.com",
+        "updatedBy": "swetha.pullela@beehyv.com",
+        "createdAt": "2024-11-07T12:09:28.432",
+        "updatedAt": "2024-11-07T12:09:28.432",
+        "id": 8,
+        "leaveCategoryId": 2,
+        "leaveName": "Hospitalization Leave",
+        "numberOfDays": 250,
+        "year": "2024",
+        "tenantId": "beehyv",
+        "color": "#8E24AA",
+        "maxCarryForwardLeavesAllowed": 125,
+        "maxEncashmentLeavesAllowed": 125
+    },
+    {
+        "createdBy": "divyateja.konatam@beehyv.com",
+        "updatedBy": "vanshika12",
+        "createdAt": "2024-10-10T09:25:26.108",
+        "updatedAt": "2025-02-10T07:55:13.122",
+        "id": 6,
+        "leaveCategoryId": 1,
+        "leaveName": "Marriage Leave",
+        "numberOfDays": 0,
+        "year": "2025",
+        "tenantId": "beehyv",
+        "color": "#039BE5",
+        "maxCarryForwardLeavesAllowed": 0,
+        "maxEncashmentLeavesAllowed": 0
+    },
+    {
+        "createdBy": "vanshika12",
+        "updatedBy": "vanshika12",
+        "createdAt": "2025-02-06T05:05:39.122",
+        "updatedAt": "2025-02-06T05:05:39.122",
+        "id": 12,
+        "leaveCategoryId": 1,
+        "leaveName": "Maternity Leave",
+        "numberOfDays": 0,
+        "year": "2025",
+        "tenantId": "beehyv",
+        "color": "#E67C73",
+        "maxCarryForwardLeavesAllowed": 0,
+        "maxEncashmentLeavesAllowed": 0
+    },
+    {
+        "createdBy": "vanshika12",
+        "updatedBy": "vanshika12",
+        "createdAt": "2025-02-10T07:58:01.618",
+        "updatedAt": "2025-02-10T07:58:01.618",
+        "id": 13,
+        "leaveCategoryId": 1,
+        "leaveName": "Paternity Leave",
+        "numberOfDays": 0,
+        "year": "2025",
+        "tenantId": "beehyv",
+        "color": "#7986CB",
+        "maxCarryForwardLeavesAllowed": 0,
+        "maxEncashmentLeavesAllowed": 0
+    },
+    {
+        "createdBy": "dinesh.c@beehyv.com",
+        "updatedBy": "suraj.majumdar@beehyv.com",
+        "createdAt": "2024-05-22T09:01:29.497",
+        "updatedAt": "2024-11-20T10:00:15.898",
+        "id": 1,
+        "leaveCategoryId": 1,
+        "leaveName": "Unpaid Time Off",
+        "numberOfDays": 18,
+        "year": "2024",
+        "tenantId": "beehyv",
+        "color": "#33B679",
+        "maxCarryForwardLeavesAllowed": 0,
+        "maxEncashmentLeavesAllowed": 0
+    }
+]
+
+for the availed leaves:
+https://beesheets-qa.beehyv.com/workflow/leaves/e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d/application?startDate=2026-02-01&endDate=2026-02-19&status=APPROVED&
+
+{
+    "status": "200 OK",
+    "message": null,
+    "data": {
+        "content": [
+            {
+                "createdBy": "service-account-beesheets-backend",
+                "updatedBy": "service-account-beesheets-backend",
+                "createdAt": "2026-02-03T09:30:00.149",
+                "updatedAt": null,
+                "applicationStatusDTOS": [
+                    {
+                        "createdBy": "service-account-beesheets-backend",
+                        "updatedBy": "service-account-beesheets-backend",
+                        "createdAt": "2026-02-03T09:30:00.2",
+                        "updatedAt": "2026-02-03T09:30:00.25",
+                        "applicationDTO": null,
+                        "dateOfResponse": null,
+                        "type": "leave",
+                        "status": "APPROVED",
+                        "comments": null,
+                        "approverId": "1966ce62-3bf4-4966-9c66-5de28d7c605f",
+                        "tenantId": "beehyv",
+                        "id": 3593
+                    }
+                ],
+                "id": 1831,
+                "tenantId": "beehyv",
+                "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                "empName": "divyateja konatam",
+                "leaveId": 7,
+                "startDate": "2026-02-02",
+                "endDate": "2026-02-02",
+                "reason": "Incomplete HOurs converted to Casual Leave",
+                "status": "APPROVED",
+                "isUpdatedByAdmin": false,
+                "isUpdatedByHr": null,
+                "type": "leave"
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "empty": true,
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 1,
+            "paged": true,
+            "unpaged": false
+        },
+        "totalPages": 1,
+        "totalElements": 1,
+        "last": true,
+        "size": 1,
+        "number": 0,
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "first": true,
+        "empty": false
+    },
+    "errors": null
+}
+
+consolited timings:
+https://beesheets-qa.beehyv.com/timings/consolidated?userId=e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d&startDate=2026-02-19&endDate=2026-02-19
+{
+    "content": [
+        {
+            "createdBy": null,
+            "updatedBy": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "id": null,
+            "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+            "tenantId": "beehyv",
+            "date": "2026-02-19",
+            "breaks": 2941000,
+            "officeHrs": 23896000,
+            "totalHrs": 23896000,
+            "wfhHrs": 0,
+            "externalHrs": 0,
+            "flag": null,
+            "punches": [
+                {
+                    "id": 151221,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T11:49:17",
+                    "logDate": "2026-02-19",
+                    "logTime": "11:49:17",
+                    "direction": "in",
+                    "deviceName": "Second Floor",
+                    "isArchived": false
+                },
+                {
+                    "id": 151223,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T12:45:43",
+                    "logDate": "2026-02-19",
+                    "logTime": "12:45:43",
+                    "direction": "out",
+                    "deviceName": "Second Floor",
+                    "isArchived": false
+                },
+                {
+                    "id": 151224,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T12:46:37",
+                    "logDate": "2026-02-19",
+                    "logTime": "12:46:37",
+                    "direction": "in",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                },
+                {
+                    "id": 151225,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T13:09:02",
+                    "logDate": "2026-02-19",
+                    "logTime": "13:09:02",
+                    "direction": "out",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                },
+                {
+                    "id": 151228,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T13:53:05",
+                    "logDate": "2026-02-19",
+                    "logTime": "13:53:05",
+                    "direction": "in",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                },
+                {
+                    "id": 151236,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T17:26:04",
+                    "logDate": "2026-02-19",
+                    "logTime": "17:26:04",
+                    "direction": "out",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                },
+                {
+                    "id": 151237,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T17:30:08",
+                    "logDate": "2026-02-19",
+                    "logTime": "17:30:08",
+                    "direction": "in",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                },
+                {
+                    "id": 151244,
+                    "employeeId": "e2e461ba-44f4-40d7-acbb-fa2f9c3b6f7d",
+                    "tenantId": "beehyv",
+                    "logDateTime": "2026-02-19T19:16:34",
+                    "logDate": "2026-02-19",
+                    "logTime": "19:16:34",
+                    "direction": "out",
+                    "deviceName": "Third Floor-2",
+                    "isArchived": false
+                }
+            ]
+        }
+    ],
+    "pageable": "INSTANCE",
+    "totalPages": 1,
+    "totalElements": 1,
+    "last": true,
+    "size": 1,
+    "number": 0,
+    "sort": {
+        "empty": true,
+        "unsorted": true,
+        "sorted": false
+    },
+    "numberOfElements": 1,
+    "first": true,
+    "empty": false
+}
+
+Now, you know that, I'll be developing the dashboard page, for that I need user greetings, consolidated timings, leaves, wfhs and other information. for that I'll be using this json dummy data here.
+
