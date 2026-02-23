@@ -57,7 +57,7 @@ public struct DashboardView: View {
                         Image("beesheets_logo")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 24)
+                            .frame(width: 96, height: 32)
                     }
                 }
 
